@@ -1,0 +1,70 @@
+<header class="">
+  <div class="container h-full flex items-center">
+    <div class="flex justify-between w-full">
+      <span class="logo">
+        AngDocEditor
+      </span>
+      <div class="nav">
+        <div class="flex justify-between space-x-7">
+          <a class="nav-link" routerLink="/">Главная</a>
+          <a class="nav-link" routerLink="/docs">Документы</a>
+          <a class="nav-link" routerLink="/dashboard/friends">Книги</a>
+          <div class="nav-link auth">
+            <a *ngIf="isLoggedIn" routerLink="/dashboard/profile">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                   class="w-10 h-10" preserveAspectRatio="xMidYMid meet">
+                <path opacity="0.41"
+                      d="M19.4887 39.4921C29.4057 39.1908 37.1254 30.3285 36.734 19.6165C36.3417 8.89953 27.9791 0.375399 18.0488 0.501383L19.4887 39.4921ZM19.4887 39.4921C9.47731 39.7955 0.91263 31.2777 0.514349 20.3834M19.4887 39.4921L0.514349 20.3834M0.514349 20.3834C0.116237 9.49368 8.03737 0.633005 18.0485 0.501386L0.514349 20.3834Z"
+                      fill="#35465B" stroke="#CFE2FF"></path>
+                <path d="M24.6269 11.587C24.6269 15.166 21.9501 19.0379 18.6482 19.0379C15.3464 19.0379 12.6704 15.1697 12.6704 11.587C12.6704 8.00424 15.3464 5.46504 18.6482 5.46504C21.9501 5.46504 24.6269 8.00424 24.6269 11.587Z"
+                      fill="#7697B9"></path>
+                <path d="M11.2292 32.8311H25.8229C26.5717 32.8311 27.3012 32.5729 27.9061 32.0938C28.5109 31.6148 28.9599 30.9396 29.1881 30.1657L29.9737 27.5032C30.2525 26.5638 30.1864 25.5439 29.789 24.6562C29.3917 23.7684 28.6938 23.0814 27.841 22.7384C21.9021 20.3838 15.7601 20.6842 9.46887 22.956C7.70682 23.5917 6.72858 25.6374 7.21206 27.5832L7.81966 30.0019C8.02271 30.8143 8.46664 31.5316 9.08288 32.043C9.69911 32.5543 10.4534 32.8313 11.2292 32.8311V32.8311Z"
+                      fill="#7C97B6"></path>
+                <circle *ngIf="hasNotifications" cx="34" cy="34" r="6" fill="#C33418"></circle>
+              </svg>
+            </a>
+            <a *ngIf="!isLoggedIn" routerLink="/auth/login">
+              Login
+            </a>
+            <div *ngIf="isLoggedIn" class="notifications">
+              <div>
+                <p class="title">Уведомления</p>
+              </div>
+              <div class="border-line"></div>
+              <ul class="notifications-list">
+                <li class="notification-item">
+                  <div class="flex justify-start items-start">
+                    <div class="self-stretch flex-grow-0 flex-shrink-0 w-[5px] bg-color-blue00"></div>
+                    <div class="notification-item__container">
+                      <div class="flex justify-start items-start flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2.5 py-1.5">
+                        <img class="flex-grow-0 flex-shrink-0" src="ellipse-40.png" />
+                      </div>
+                      <div class="flex flex-col justify-start ">
+                        <p class="user-name">
+                          Carmen Parksouth
+                        </p>
+                        <p class="message">
+                          Shared the file <span class="font-bold">
+                            Test.docx
+                          </span>
+                          with uou
+                        </p>
+                        <p class="created_at">
+                          24 min ago
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
