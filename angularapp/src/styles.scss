@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-greenPrimary: #07353A;
+    --color-primary35: #35465B;
+    --color-black33: #333333;
+    --color-grey79: #797979;
+    --color-greyD7: #D7D7D7;
+    --color-greyDE: #DEDEDE;
+    --color-greyEA: #EAEDF2;
+    --color-grey7C: #7C97B6;
+    --color-green39: #39A956;
+    --color-blue00: #0071ff;
+    --color-red_validation: #c33418;
+    --color-blueCF: #CFE2FF;
+    --color-green25: #258869;
+    --color-green60: #60AF71;
+}
+
+.container {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.border-line {
+    width: 100%;
+    height: 0px;
+    border: 1px solid var(--color-greyD7);
+}
+
+.main {
+    h3 {
+        margin: 30px 0 22px 0;
+
+        font-family: 'Poppins';
+        font-size: 20px;
+        line-height: 135%;
+        font-weight: 500;
+
+        color: var(--color-primary35);
+    }
+
+    h4 {
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 135%;
+        /* or 16px */
+
+        color: var(--color-primary35);
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        //justify-content: space-between;
+        padding: 30px 0 30px 0;
+
+        // &>div {
+        //   flex: 11;
+        // }
+
+    }
+}
+
+
+html {
+    height: 100vh;
+}
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    height: 100%;
+}
+
+.bg-hero {
+    background: var(--color-greenPrimary);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+// .bg-hero {
+//     background: var(--color-greenPrimary) url('assets/img/hero-bg.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     width: 100%;
+//     padding-top: 60%;
+//     // background-size: 100%;
+//     // min-height: 700px;
+//     position: absolute;
+//     left: 0px;
+//     top: 0px;
+//     z-index: -1;
+// }

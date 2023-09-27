@@ -1,0 +1,11 @@
+<div class="fixed inset-0 items-center justify-center z-50"
+    [ngClass]="{'hidden': !errorModalService.is_open, 'flex': errorModalService.is_open}">
+    <div class="bg-black opacity-50 fixed inset-0"></div>
+    <div class="bg-white p-6 rounded-lg shadow-lg transform scale-0 transition-transform ease-in-out duration-300">
+        <!-- <ng-content></ng-content> -->
+        <div class="alert alert-danger">
+            <p>{{ errorModalService.error_data?.code }}</p>
+            <p>{{ errorModalService.error_data?.message }}</p>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/_core/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent {
   form: FormGroup;
 
   constructor(
-    //private authService: AuthService,
+    private authService: AuthService,
     private router: Router
   ) {
     this.form = new FormGroup({
@@ -22,11 +23,12 @@ export class LoginComponent {
 
   submit() {
     if (!this.form.invalid) {
-      //this.authService.login(this.form.value).subscribe(() => {
-      //  this.authService.getUserData().subscribe(() => {
-      //    this.router.navigate(['/']);
-      //  })
-      //});
+      const data = this.form.value
+      this.authService.login(data).subscribe(() => {
+       this.authService.getUserData().subscribe(() => {
+         this.router.navigate(['/']);
+       })
+      });
     }
   }
 }

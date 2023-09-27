@@ -1,18 +1,5 @@
-.filters {
-  border-top: 5px solid var(--color-green60);
-  width: 100%;
-  height: 50px;
-  background-color: var(--col);
-  margin: 0 0 5px 0;
-}
-
-.form-container {
-  min-height: 800px;
-  background-color: white;
-}
-
 .login-form {
   .alert {
-      color: blue;
+      color: var(--color-red_validation);
   }
 }
