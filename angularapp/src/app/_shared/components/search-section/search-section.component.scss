@@ -1,0 +1,100 @@
+.frame {
+  position: relative;
+  background-color: #eaedf2;
+}
+
+.frame .div {
+  width: 720px;
+  height: 180px;
+  align-items: flex-start;
+  gap: 40px;
+  top: 90px;
+  left: 180px;
+  display: flex;
+  position: absolute;
+}
+
+.frame .new-doc {
+  position: relative;
+  width: 150px;
+  height: 180px;
+}
+
+.frame .div-2 {
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #d7d7d7;
+  display: flex;
+  position: absolute;
+}
+
+.frame .plus {
+  position: relative;
+  width: 75.29px;
+  height: 75.15px;
+}
+
+.frame .overlap-group {
+  position: relative;
+  width: 75px;
+  height: 75px;
+}
+
+.frame .rectangle {
+  position: absolute;
+  width: 6px;
+  height: 75px;
+  top: 0;
+  left: 35px;
+  background-color: #7c97b6;
+}
+
+.frame .rectangle-2 {
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 6px;
+  height: 75px;
+  top: 0;
+  left: 35px;
+  background-color: #7c97b6;
+}
+
+.frame .title {
+  position: absolute;
+  height: 19px;
+  top: 156px;
+  left: 18px;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #35465b;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .img {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper {
+  position: absolute;
+  height: 30px;
+  top: 29px;
+  left: 180px;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #35465b;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}

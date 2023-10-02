@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ErrorModalService {
-  is_open: boolean = true;
+  is_open: boolean = false;
   error_data?: ErrorData;
 
   constructor() { }

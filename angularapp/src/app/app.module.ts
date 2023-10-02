@@ -10,6 +10,13 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NavbarComponent } from './_shared/components/navbar/navbar/navbar.component';
 import { AuthInterceptor } from './_core/interceptors/auth.interceptor';
 import { ErrorModalComponent } from './_shared/modals/error-modal/error-modal.component';
+import { SearchSectionComponent } from './_shared/components/search-section/search-section.component';
+import { TableComponent } from './_shared/components/table/table/table.component';
+import { TablePaginationComponent } from './_shared/components/table/table-pagination/table-pagination.component';
+import { DocumentEditComponent } from './_features/docs/document-edit/document-edit.component';
+import { QuillModule } from 'ngx-quill';
+import { RichTextEditorComponent } from './_shared/forms/rich-text-editor/rich-text-editor.component';
+import { RichTextEditorModule } from './_shared/forms/rich-text-editor/rich-text-editor.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +24,18 @@ import { ErrorModalComponent } from './_shared/modals/error-modal/error-modal.co
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    ErrorModalComponent
+    ErrorModalComponent,
+    SearchSectionComponent,
+    TableComponent,
+    TablePaginationComponent,
+    DocumentEditComponent,
   ],
   imports: [
-    BrowserModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    RichTextEditorModule,
   ],
   providers: [
     {

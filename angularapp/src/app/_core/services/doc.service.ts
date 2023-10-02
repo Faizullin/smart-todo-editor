@@ -13,14 +13,15 @@ export class DocService {
 
   getDocs(DocFilters: DocFilters) {
     return this.http
-      .get<any>(`/api/docs/`, {
+      .get<any>(`/api/documents/`, {
         params: {
           ...DocFilters,
         }
       })
       .pipe(
         map((data: any) => {
-          const docs_data = data.results || []
+          // const docs_data = data.results || []
+          const docs_data = data;
           const total_items = data.count || 0
           return {
             results: docs_data.map(function (docs: any): Doc {

@@ -5,6 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+
 :root {
     --color-greenPrimary: #07353A;
     --color-primary35: #35465B;
